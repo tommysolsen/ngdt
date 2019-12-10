@@ -1,2 +1,5 @@
 Public Key:   {{.PublicKey}}
 Private Key:  {{.PrivateKey}}
+{{if .Database}}Database:     {{.Database}}{{end}}
+{{if .Username}}Username:     {{.Username}}{{end}}
+{{if .Password}}Password:     {{.Password}}{{end}}
