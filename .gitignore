@@ -1,0 +1,3 @@
+bin/*
+.vscode
+*_temp.go
