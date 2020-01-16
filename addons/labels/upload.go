@@ -45,7 +45,7 @@ var uploadCommand = &cobra.Command{
 		for _, v := range uniqueLabels {
 			existed, err := nfClient.PostLabel(v)
 			if err != nil {
-				fmt.Println("ERROR: %s", err.Error())
+				fmt.Printf("ERROR: %s", err.Error())
 			} else {
 				if existed {
 					fmt.Printf("EXIST -> %s\r\n", v)
