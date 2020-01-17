@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/spf13/cobra"
+	"github.com/tommysolsen/ngdt/addons/completion"
 	"github.com/tommysolsen/ngdt/addons/generate"
 	"github.com/tommysolsen/ngdt/addons/info"
 	"github.com/tommysolsen/ngdt/addons/labels"
@@ -23,6 +24,7 @@ func main() {
 	info.InjectInto(rootCmd)
 	generate.InjectInto(rootCmd)
 	labels.InjectInto(rootCmd)
+	completion.InjectInto(rootCmd)
 	err := rootCmd.Execute()
 	if err != nil {
 		log.Fatalf("Error Occurred: %s\r\n", err.Error())
